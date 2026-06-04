@@ -1,15 +1,6 @@
 #!/bin/bash
 
-### Instalando Mullvad VPN y Mullvad Browser
 
-echo "Paso 1: Instalando Mullvad VPN y Mullvad Browser"
-
-sudo curl -fsSLo /usr/share/keyrings/mullvad-keyring.asc https://repository.mullvad.net/deb/mullvad-keyring.asc
-
-echo "deb [signed-by=/usr/share/keyrings/mullvad-keyring.asc arch=$( dpkg --print-architecture )] https://repository.mullvad.net/deb/stable stable main" | sudo tee /etc/apt/sources.list.d/mullvad.list
-
-sudo apt update
-sudo apt install mullvad-vpn mullvad-browser -y
 
 ### Instalando programas y desistalando programas que vienen por defecto en kde
 echo "Paso 2: Instalando Programas varios"
@@ -72,6 +63,16 @@ wget https://download.virtualbox.org/virtualbox/7.2.8/virtualbox-7.2_7.2.8-17373
 
 sudo dpkg -i virtual*.deb
 
+sudo apt install -f
+
+sudo dpkg -i virtual*.deb
+
+sudo rm virtual*.deb
+
+sudo apt install linux-headers-$(uname -r)
+
+sudo /sbin/vboxconfig
+
   ### Configurando cortafuegos
 
 echo "Paso 7: Creación de reglas para el cortafuegos"
@@ -93,6 +94,22 @@ echo "Paso 8: Descarga de paquete de libreoffice"
 user=$(awk -F: '$3 == 1000 {print $1}' /etc/passwd)
 
 wget https://extensions.libreoffice.org/assets/downloads/508/1735925190/codehighlighter2.oxt && mv codehighlighter2.oxt /home/$user/
+
+#####################
+
+### Instalando Mullvad VPN y Mullvad Browser
+
+echo "Paso 1: Instalando Mullvad VPN y Mullvad Browser"
+
+sudo curl -fsSLo /usr/share/keyrings/mullvad-keyring.asc https://repository.mullvad.net/deb/mullvad-keyring.asc
+
+echo "deb [signed-by=/usr/share/keyrings/mullvad-keyring.asc arch=$( dpkg --print-architecture )] https://repository.mullvad.net/deb/stable stable main" | sudo tee /etc/apt/sources.list.d/mullvad.list
+
+sudo apt update
+sudo apt install mullvad-vpn mullvad-browser -y
+
+######################
+
 
 echo "Paso 11: Limpieza de paquetes"
 
