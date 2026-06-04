@@ -5,7 +5,7 @@
 ### Instalando programas y desistalando programas que vienen por defecto en kde
 echo "Paso 2: Instalando Programas varios"
 
-sudo apt install myspell-es vlc kleopatra keepassxc syncthing htop btop -y
+sudo apt install myspell-es vlc kleopatra keepassxc syncthing htop btop ufw -y
 
 ##sudo apt remove kmahjongg kmines kpat firefox -y
 
@@ -63,13 +63,13 @@ wget https://download.virtualbox.org/virtualbox/7.2.8/virtualbox-7.2_7.2.8-17373
 
 sudo dpkg -i virtual*.deb
 
-sudo apt install -f
+sudo apt install -f -y
 
 sudo dpkg -i virtual*.deb
 
 sudo rm virtual*.deb
 
-sudo apt install linux-headers-$(uname -r)
+sudo apt install linux-headers-$(uname -r) gcc make -y 
 
 sudo /sbin/vboxconfig
 
