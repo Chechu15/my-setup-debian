@@ -17,13 +17,13 @@ sudo apt install git -y
 ### 2. Clonar el repositorio
 
 ```bash
-git clone https://github.com/Chechu15/my-setup-fedora.git
+git clone https://github.com/Chechu15/my-setup-debian.git
 ```
 
 ### 3. Entrar en la Carpeta del Proyecto
 
 ```bash
-cd my-setup-fedora
+cd my-setup-debian
 ```
 ### 4. Dar Permisos de Ejecución al Script
 
