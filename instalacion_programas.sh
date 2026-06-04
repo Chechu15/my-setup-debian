@@ -115,5 +115,5 @@ echo "Paso 11: Limpieza de paquetes"
 
 sudo apt autoremove -y
 
-echo "Final del Script!!!!!!, le recomendamos que reinice el equipo con el comando <reboot>"
+echo "Final del Script!!!!!!, le recomendamos que reinice el equipo con el comando <sudo reboot>"
 
