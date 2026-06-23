@@ -5,7 +5,7 @@
 ### Instalando programas y desistalando programas que vienen por defecto en kde
 echo "Paso 2: Instalando Programas varios"
 
-sudo apt install myspell-es vlc kleopatra keepassxc syncthing htop btop ufw -y
+sudo apt install myspell-es vlc kleopatra keepassxc syncthing htop btop ufw fastfetch -y
 
 ##sudo apt remove kmahjongg kmines kpat firefox -y
 
