@@ -39,6 +39,7 @@ sudo apt install flatpak -y
   com.github.tchx84.Flatseal \
   io.gitlab.librewolf-community \
   org.cryptomator.Cryptomator \
+  flatpak install flathub jp.nonbili.noutube \
   org.mozilla.firefox -y
 
   ### Instalando brave
